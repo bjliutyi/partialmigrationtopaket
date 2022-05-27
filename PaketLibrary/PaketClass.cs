@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace PaketLibrary
 {
@@ -10,7 +7,7 @@ namespace PaketLibrary
     {
         public static string Invoke()
         {
-            return "PaketClass.Invoke() is invoked";
+            return $"PaketClass.Invoke() is invoked  [{JsonConvert.SerializeObject(DateTime.Now)}]";
         }
     }
 }
