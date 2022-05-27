@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+         {
+             "name": ".NET Framework Launch",
+             "type":"clr",
+             "request": "launch",
+             "preLaunchTask": "build",
+             "program": "${workspaceFolder}/PartialMigrationToPaket/bin/x64/Debug/PartialMigrationToPaket.exe",
+             "args":[],
+             "stopAtEntry": false,
+             "symbolOptions": {
+                "searchPaths": ["${workspaceFolder}/PartialMigrationToPaket/bin/x64/Debug"],
+                "searchMicrosoftSymbolServer": false
+             },
+             "logging": {
+                 "moduleLoad": false
+             },
+         },
+    ]
+}
+  

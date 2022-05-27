@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command":"msbuild.exe",
+            "type":"shell",
+            "args":[
+                "PartialMigrationToPaket.sln",
+                "/t:Build",
+                "/p:Configuration=Debug",
+                "/p:Platform=\"x64\""
+            ]
+        }
+    ]
+}
+  
