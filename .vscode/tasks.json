@@ -2,15 +2,45 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
-            "command":"msbuild.exe",
-            "type":"shell",
-            "args":[
+            "label": "tool",
+            "type": "shell",
+            "command": "dotnet tool restore"
+        },
+        {
+            "label": "paket",
+            "type": "shell",
+            "command": "dotnet paket restore"
+        },
+        {
+            "label": "nuget",
+            "type": "shell",
+            "command": "./nuget.exe restore"
+        },
+        {
+            "label": "rebuild",
+            "command": "msbuild.exe",
+            "type": "shell",
+            "args": [
                 "PartialMigrationToPaket.sln",
                 "/t:Rebuild",
                 "/p:Configuration=Debug",
                 "/p:Platform=\"x64\""
             ]
+        },
+        {
+            "label": "run",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "tool",
+                "paket",
+                "nuget",
+                "rebuild"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }

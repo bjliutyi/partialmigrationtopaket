@@ -10,14 +10,17 @@ namespace PaketLibrary
         {
             return $"PaketClass.Invoke() is invoked  [{JsonConvert.SerializeObject(DateTime.Now)}]";
         }
-        public static void InvokeLogger()
+        public static void InvokeLogger(string log)
         {
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
                 .WriteTo.Console()
                 .CreateLogger();
 
-            Log.Information("Hello, world!");
+            Log.Information("=== START ===");
+            Log.Information($"PaketLibrary.InvokeLogger: {log}");
+            Log.Information("=== END ===");
+
         }
     }
 }

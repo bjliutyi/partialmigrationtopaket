@@ -5,7 +5,7 @@
              "name": ".NET Framework Launch",
              "type":"clr",
              "request": "launch",
-             "preLaunchTask": "build",
+             "preLaunchTask": "run",
              "program": "${workspaceFolder}/PartialMigrationToPaket/bin/x64/Debug/PartialMigrationToPaket.exe",
              "args":[],
              "stopAtEntry": false,
@@ -16,6 +16,7 @@
              "logging": {
                  "moduleLoad": false
              },
+             "console": "integratedTerminal"
          },
     ]
 }
