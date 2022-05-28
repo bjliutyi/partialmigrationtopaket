@@ -14,7 +14,7 @@
         {
             "label": "nuget",
             "type": "shell",
-            "command": "./scripts/nuget_restore.ps1"
+            "command": "Get-ChildItem ./ -Filter packages.config -Recurse | %{ ./nuget.exe restore   $_.FullName  -PackagesDirectory packages }"
         },
         {
             "label": "rebuild",
