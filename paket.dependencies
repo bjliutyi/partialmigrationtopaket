@@ -1,0 +1,4 @@
+storage: none
+source https://api.nuget.org/v3/index.json
+
+nuget Newtonsoft.Json 13.0.1 restriction: >= net47
