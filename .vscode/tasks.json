@@ -22,7 +22,7 @@
             "type": "shell",
             "args": [
                 "PartialMigrationToPaket.sln",
-                "/t:Rebuild",
+                "/t:build",
                 "/p:Configuration=Debug",
                 "/p:Platform=\"x64\""
             ]
