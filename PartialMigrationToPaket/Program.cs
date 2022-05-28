@@ -10,6 +10,9 @@ namespace PartialMigrationToPaket
         {
             Console.WriteLine(NugetClass.Invoke());
             Console.WriteLine(PaketClass.Invoke());
+
+            Console.WriteLine(NugetClass.InvokeJS("5 + 3"));
+            PaketClass.InvokeLogger();
         }
     }
 }

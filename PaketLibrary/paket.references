@@ -1,1 +1,3 @@
 Newtonsoft.Json
+Serilog
+Serilog.Sinks.Console
